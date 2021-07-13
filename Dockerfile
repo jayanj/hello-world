@@ -2,5 +2,6 @@
 From tomcat:8-jre8 
 
 # Maintainer 
-MAINTAINER "jayan.jayaseelan@gmail.com" 
-RUN cp /var/jenkins_home/workspace/*/webapp/target/webapp.war /var/www/html/
+MAINTAINER "jayan.jayaseelan@gmail.com"
+WORKDIR var/jenkins_home/workspace/ci-cd/webapp/target/
+COPY webapp.war /var/www/html/
